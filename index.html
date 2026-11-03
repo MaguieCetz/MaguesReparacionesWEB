@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maguies Reparaciones | Tips de Reparación y Mantenimiento de Cómputo</title>
+  <meta name="description" content="Aprende a diagnosticar, reparar y optimizar tu equipo de cómputo con las guías y tips prácticos de Maguies Reparaciones.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <span class="brand-name">Maguies <span class="highlight">Reparaciones</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#tips" class="nav-link">Tips & Guías</a>
+        <a href="#diagnostico" class="nav-link">Diagnóstico Rápido</a>
+        <a href="#newsletter" class="nav-link">Boletín</a>
+        <a href="#newsletter" class="btn-nav">Suscribirme Gratis</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Comunidad técnica & aprendizaje continuo
+      </div>
+      <h1 class="hero-title">
+        Domina el diagnóstico y la <span class="gradient-text">reparación de computadoras</span>
+      </h1>
+      <p class="hero-subtitle">
+        Tips prácticos, soluciones a fallas comunes de hardware y software, mantenimiento preventivo y trucos de laboratorio directo a tu taller o mesa de trabajo.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#tips" class="btn-primary">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Explorar Tips
+        </a>
+        <a href="#newsletter" class="btn-secondary">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Recibir Novedades
+        </a>
+      </div>
+
+      <!-- Métricas rápidas -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">+100%</span>
+          <span class="stat-label">Tips Prácticos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">0 Costo</span>
+          <span class="stat-label">Conocimiento Abierto</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">Paso a Paso</span>
+          <span class="stat-label">Guías Detalladas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Búsqueda y Filtros -->
+  <section class="tips-section" id="tips">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Biblioteca de Conocimiento</span>
+        <h2 class="section-title">Tips y Procedimientos Técnicos</h2>
+        <p class="section-description">Selecciona una categoría o escribe tu problema para encontrar la solución adecuada.</p>
+      </div>
+
+      <!-- Barra de Filtros y Búsqueda -->
+      <div class="filters-container">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Buscar: pasta térmica, RAM, pantalla azul, SSD, encendido..." aria-label="Buscar tip">
+          <button id="clearSearch" class="btn-clear hidden" aria-label="Limpiar búsqueda">&times;</button>
+        </div>
+
+        <div class="category-pills" id="categoryPills">
+          <button class="pill active" data-category="all">Todos</button>
+          <button class="pill" data-category="hardware">Hardware</button>
+          <button class="pill" data-category="software">Software</button>
+          <button class="pill" data-category="mantenimiento">Mantenimiento</button>
+          <button class="pill" data-category="diagnostico">Diagnóstico</button>
+        </div>
+      </div>
+
+      <!-- Grid de Tarjetas de Tips -->
+      <div class="tips-grid" id="tipsGrid">
+        <!-- Las tarjetas se generan dinámicamente mediante JS -->
+      </div>
+
+      <!-- Estado vacío si no hay resultados -->
+      <div id="noResults" class="no-results hidden">
+        <div class="no-results-icon">🔍</div>
+        <h3>No encontramos tips con ese criterio</h3>
+        <p>Prueba con palabras como "RAM", "video", "temperatura" o limpia el filtro.</p>
+        <button id="resetFiltersBtn" class="btn-secondary">Restablecer filtros</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mini Sección: Guía Rápida de Diagnóstico -->
+  <section class="diagnostic-section" id="diagnostico">
+    <div class="container">
+      <div class="diagnostic-card">
+        <div class="diagnostic-content">
+          <span class="badge-accent">Árbol de Decisión Rápido</span>
+          <h2>¿Tu equipo no responde? Revisa en este orden:</h2>
+          <ol class="diagnostic-steps">
+            <li>
+              <strong>1. Energía base:</strong> Comprueba cable de poder, switch de la fuente (I/O) y toma de corriente antes de desarmar.
+            </li>
+            <li>
+              <strong>2. Códigos de audio o LED:</strong> Si los ventiladores giran pero no hay video, observa los DEBUG LEDs de la placa base (CPU, DRAM, VGA, BOOT) o cuenta los beeps.
+            </li>
+            <li>
+              <strong>3. Limpieza de memoria RAM:</strong> El 60% de fallas de arranque se resuelven retirando los módulos RAM y limpiando sus contactos dorados con goma de borrar limpia.
+            </li>
+            <li>
+              <strong>4. Reseteo de BIOS (Clear CMOS):</strong> Retira la pila CR2032 por 5 minutos con la máquina desconectada para restablecer parámetros erróneos.
+            </li>
+          </ol>
+        </div>
+        <div class="diagnostic-visual">
+          <div class="code-box">
+            <div class="code-header">
+              <span class="circle red"></span>
+              <span class="circle yellow"></span>
+              <span class="circle green"></span>
+              <span class="code-title">checklist-reparacion.log</span>
+            </div>
+            <pre><code>[OK] Multímetro en standby: 5VSB = 5.02V
+[OK] Voltaje en botón de encendido: 3.3V
+[TEST] Puentear pines PWR_SW -> Enciende
+[WARN] Sin pitido de POST: Limpiar RAM
+[OK] Señal HDMI detectada en GPU integrada
+[STATUS] Equipo reparado con éxito ✔</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Newsletter (Integración Nativa con Netlify Forms) -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-wrapper">
+        <div class="newsletter-glow"></div>
+        <div class="newsletter-info">
+          <span class="section-tag">Comunidad Maguies</span>
+          <h2 class="newsletter-title">Recibe tips semanales y nuevas guías directo a tu correo</h2>
+          <p class="newsletter-text">
+            Nada de spam. Solo diagramas, análisis de fallas reales, herramientas recomendadas y actualizaciones de nuevas guías de reparación de computadoras.
+          </p>
+          <ul class="newsletter-perks">
+            <li>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="#10b981" stroke-width="3" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              1 correo semanal con trucos de laboratorio.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="#10b981" stroke-width="3" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Casos reales de clientes y cómo se diagnosticaron.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="#10b981" stroke-width="3" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Cancela tu suscripción en 1 solo clic cuando quieras.
+            </li>
+          </ul>
+        </div>
+
+        <div class="newsletter-form-container">
+          <!-- Formulario configurado para Netlify Forms -->
+          <form 
+            name="boletin-maguies" 
+            method="POST" 
+            data-netlify="true" 
+            netlify-honeypot="bot-field"
+            id="newsletterForm" 
+            class="newsletter-form"
+          >
+            <!-- Campos requeridos por Netlify para capturar datos -->
+            <input type="hidden" name="form-name" value="boletin-maguies">
+            
+            <!-- Honeypot anti-spam para bots (oculto para usuarios) -->
+            <p class="hidden">
+              <label>No completes este campo si eres humano: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-group">
+              <label for="userName">Tu nombre (opcional)</label>
+              <input type="text" id="userName" name="nombre" placeholder="Ej. Carlos Mendoza">
+            </div>
+
+            <div class="form-group">
+              <label for="userEmail">Tu correo electrónico <span class="required">*</span></label>
+              <input type="email" id="userEmail" name="email" required placeholder="tu-correo@ejemplo.com">
+            </div>
+
+            <div class="form-group">
+              <label for="userLevel">¿Cuál es tu nivel?</label>
+              <select id="userLevel" name="nivel">
+                <option value="principiante">Principiante / Curioso</option>
+                <option value="estudiante">Estudiante de Sistemas / Electrónica</option>
+                <option value="tecnico">Técnico con Taller propio</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span>Suscribirme a los Tips</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+
+            <p class="form-terms">
+              Respetamos tu privacidad. Tus datos quedan seguros con <strong>Maguies Reparaciones</strong>.
+            </p>
+          </form>
+
+          <!-- Mensaje de éxito tras suscribirse -->
+          <div id="formSuccess" class="form-feedback success hidden">
+            <div class="feedback-icon">🎉</div>
+            <h3>¡Gracias por unirte a Maguies!</h3>
+            <p>Tu correo ha quedado registrado exitosamente. Te enviaremos el próximo tip muy pronto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para ver el tutorial completo de un tip -->
+  <div id="tipModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar modal">&times;</button>
+      <div class="modal-badge-container">
+        <span id="modalCategory" class="badge">Hardware</span>
+        <span id="modalDifficulty" class="badge-difficulty">Fácil</span>
+      </div>
+      <h2 id="modalTitle" class="modal-title">Título de la Guía</h2>
+      <div class="modal-meta">
+        <span id="modalTime">⏱ 5 min</span>
+        <span>•</span>
+        <span id="modalTools">🛠️ Herramientas requeridas</span>
+      </div>
+      <div id="modalBody" class="modal-body">
+        <!-- Contenido detallado inyectado por JS -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="modalCloseBtn">Entendido, cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <span class="brand-name">Maguies <span class="highlight">Reparaciones</span></span>
+        </div>
+        <p class="footer-tagline">
+          Tu portal confiable de conocimiento técnico para la solución, diagnóstico y reparación de computadoras y laptops.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <a href="#tips">Tips & Guías</a>
+          <a href="#diagnostico">Diagnóstico Rápido</a>
+          <a href="#newsletter">Boletín Técnico</a>
+        </div>
+        <div class="footer-col">
+          <h4>Temas</h4>
+          <a href="#tips" onclick="filterByCat('hardware')">Hardware & Componentes</a>
+          <a href="#tips" onclick="filterByCat('software')">Software & Sistemas</a>
+          <a href="#tips" onclick="filterByCat('mantenimiento')">Mantenimiento Preventivo</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Maguies Reparaciones. Desarrollado con esmero para entusiastas y técnicos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
